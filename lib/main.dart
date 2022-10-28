@@ -4,7 +4,21 @@ import 'package:amplify_todo/amplifyconfiguration.dart';
 import 'package:amplify_todo/pages/home.dart';
 import "package:flutter/material.dart";
 
-void main(List<String> args) {
+void main(List<String> args) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    // get the tool
+    final auth = AmplifyAuthCognito();
+
+    // add tool to plugin
+    await Amplify.addPlugins([auth]);
+
+    // configure amplify
+    await Amplify.configure(amplifyconfig);
+  } catch (err) {
+    safePrint("Something went wrong $err");
+  }
+
   runApp(MyApp());
 }
 
@@ -18,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _initializeAmplify();
+    // _initializeAmplify();
   }
 
   Future<void> _initializeAmplify() async {
