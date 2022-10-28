@@ -63,7 +63,6 @@ class _SignupState extends State<Signup> {
                 child: Text('Create account'),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    print('form field is valid');
                   } else {
                     print('invalid data in form field');
                   }

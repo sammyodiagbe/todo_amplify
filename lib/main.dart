@@ -3,7 +3,9 @@ import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:amplify_todo/amplifyconfiguration.dart';
 import 'package:amplify_todo/pages/auth/signup.dart';
 import 'package:amplify_todo/pages/home.dart';
+import 'package:amplify_todo/providers/authProvider.dart';
 import "package:flutter/material.dart";
+import 'package:provider/provider.dart';
 
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,8 +55,11 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Signup(),
+    return ChangeNotifierProvider(
+      create: (_) => AppAuthProvider(),
+      child: MaterialApp(
+        home: Home(),
+      ),
     );
   }
 }
