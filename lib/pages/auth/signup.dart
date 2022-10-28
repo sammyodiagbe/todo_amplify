@@ -17,21 +17,59 @@ class _SignupState extends State<Signup> {
         title: Text("Create account."),
       ),
       body: Form(
-        child: Column(
-          children: [
-            TextFormField(
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return "Field cannot be empty";
-                }
-              },
-              decoration: InputDecoration(),
-            ),
-            ElevatedButton(
-              child: Text('Create account'),
-              onPressed: () {},
-            )
-          ],
+        key: _formKey,
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            children: [
+              TextFormField(
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Field cannot be empty";
+                  }
+                },
+                decoration: InputDecoration(
+                  hintText: 'Username',
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              TextFormField(
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Field cannot be empty";
+                  }
+                },
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                ),
+              ),
+              SizedBox(height: 8),
+              TextFormField(
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Field cannot be empty";
+                  }
+                },
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                ),
+              ),
+              SizedBox(height: 8),
+              ElevatedButton(
+                child: Text('Create account'),
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    print('form field is valid');
+                  } else {
+                    print('invalid data in form field');
+                  }
+                },
+              )
+            ],
+          ),
         ),
       ),
     );
