@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
     return ChangeNotifierProvider(
       create: (_) => AppAuthProvider(),
       child: MaterialApp(
-        home: Home(),
+        home: Signup(),
       ),
     );
   }
