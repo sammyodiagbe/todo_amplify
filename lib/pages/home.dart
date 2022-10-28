@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
           child: ElevatedButton(
             child: Text('Click me'),
             onPressed: () {
-              getAuthSession();
+              // getAuthSession();
             },
           ),
         ),
