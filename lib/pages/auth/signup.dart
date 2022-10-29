@@ -67,7 +67,8 @@ class _SignupState extends State<Signup> {
                     child: Text('Create account'),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        provider.
+                        provider.createUserAccount(
+                            "sammyodiagbe", "test@gmail.com", "password1234");
                       } else {
                         print('invalid data in form field');
                       }
