@@ -12,6 +12,7 @@ class AppAuthProvider extends ChangeNotifier {
     try {
       final userAttributes = <CognitoUserAttributeKey, String>{
         CognitoUserAttributeKey.email: email,
+        CognitoUserAttributeKey.phoneNumber: "+134267892"
       };
 
       final result = await Amplify.Auth.signUp(
