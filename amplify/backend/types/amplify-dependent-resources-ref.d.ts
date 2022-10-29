@@ -7,14 +7,20 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "auth": {
-        "amplifytodo563eb3bc": {
-            "IdentityPoolId": "string",
-            "IdentityPoolName": "string",
+        "amplifytodo": {
             "UserPoolId": "string",
             "UserPoolArn": "string",
             "UserPoolName": "string",
             "AppClientIDWeb": "string",
             "AppClientID": "string"
+        }
+    },
+    "function": {
+        "amplifytodoc16b3699PreTokenGeneration": {
+            "Name": "string",
+            "Arn": "string",
+            "LambdaExecutionRole": "string",
+            "Region": "string"
         }
     }
 }

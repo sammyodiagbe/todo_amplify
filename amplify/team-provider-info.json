@@ -12,11 +12,17 @@
       "AmplifyAppId": "d2spu32hx45kij"
     },
     "categories": {
-      "auth": {
-        "amplifytodo563eb3bc": {}
-      },
       "api": {
         "amplifyDatasource": {}
+      },
+      "auth": {
+        "amplifytodo": {}
+      },
+      "function": {
+        "amplifytodoc16b3699PreTokenGeneration": {
+          "deploymentBucketName": "amplify-amplifytodo-dev-95258-deployment",
+          "s3Key": "amplify-builds/amplifytodoc16b3699PreTokenGeneration-30764234546f70726d6f-build.zip"
+        }
       }
     }
   }

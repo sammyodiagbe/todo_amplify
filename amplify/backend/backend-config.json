@@ -18,7 +18,7 @@
     }
   },
   "auth": {
-    "amplifytodo563eb3bc": {
+    "amplifytodo": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -41,6 +41,13 @@
           "EMAIL"
         ]
       }
+    }
+  },
+  "function": {
+    "amplifytodoc16b3699PreTokenGeneration": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   }
 }

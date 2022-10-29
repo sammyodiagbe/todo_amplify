@@ -7,8 +7,7 @@ import 'package:amplify_todo/providers/authProvider.dart';
 import "package:flutter/material.dart";
 import 'package:provider/provider.dart';
 
-void main(List<String> args) async {
-  WidgetsFlutterBinding.ensureInitialized();
+_configureAmplify() async {
   try {
     // get the tool
     final auth = AmplifyAuthCognito();
@@ -21,7 +20,12 @@ void main(List<String> args) async {
   } catch (err) {
     safePrint("Something went wrong $err");
   }
+}
 
+void main(List<String> args) async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await _configureAmplify();
   runApp(MyApp());
 }
 
